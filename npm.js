@@ -28,7 +28,6 @@
             }
         })
 
-        console.log("SCHEMAS", schemas);
         return schemas
     };
 
