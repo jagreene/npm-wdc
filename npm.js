@@ -22,7 +22,7 @@
 
         schemas = packages.map(function(name){
             return {
-                id: name,
+                id: name.replace(/[^a-zA-Z ]/g, ""),
                 alias: name,
                 columns: cols
 
@@ -36,7 +36,7 @@
     myConnector.getData = function(table, doneCallback) {
 
         var dates = tableau.connectionData.split(';')[1];
-        var apiCall = "https://api.npmjs.org/downloads/range/"+dates+"/" + table.tableInfo.id;
+        var apiCall = "https://api.npmjs.org/downloads/range/"+dates+"/" + table.tableInfo.alias;
 
         tableau.log("dates: " + dates);
         tableau.log("api call: " + apiCall);
@@ -47,7 +47,7 @@
 
             table.appendRows(dates.map(function(date){
                 return {
-                    name: table.tableInfo.id,
+                    name: table.tableInfo.alias,
                     date: date.day,
                     downloads: date.downloads
                 }
