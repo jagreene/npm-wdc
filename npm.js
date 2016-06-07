@@ -20,7 +20,7 @@
 
         var packages = tableau.connectionData.split(";")[0].replace(/\s+/g, '').split(',');
 
-        schemasCallback(packages.map(function(name){
+        schemaCallback(packages.map(function(name){
             return {
                 id: name.replace(/[^a-zA-Z ]/g, ""),
                 alias: name,
