@@ -1,3 +1,4 @@
+(function(){
 
     // Create the connector object
     var myConnector = tableau.makeConnector();
