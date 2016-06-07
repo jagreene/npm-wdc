@@ -20,14 +20,16 @@
 
         var packages = tableau.connectionData.split(";")[0].replace(/\s+/g, '').split(',');
 
-        schemaCallback(packages.map(function(name){
+        var schemas(packages.map(function(name){
             return {
                 id: name.replace(/[^a-zA-Z ]/g, ""),
                 alias: name,
                 columns: cols
-
             }
         }))
+
+        console.log("SCHEMAS", schemas);
+        return schemas
     };
 
     // Download the data
