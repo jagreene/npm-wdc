@@ -22,20 +22,21 @@
 
         var schemas = packages.map(function(name){
             return {
-                id: name.replace(/[^a-zA-Z ]/g, ""),
+                id: name,
                 alias: name,
                 columns: cols
+
             }
         })
 
-        return schemas
+        schemaCallback(schemas);
     };
 
     // Download the data
     myConnector.getData = function(table, doneCallback) {
 
         var dates = tableau.connectionData.split(';')[1];
-        var apiCall = "https://api.npmjs.org/downloads/range/"+dates+"/" + table.tableInfo.alias;
+        var apiCall = "https://api.npmjs.org/downloads/range/"+dates+"/" + table.tableInfo.id;
 
         tableau.log("dates: " + dates);
         tableau.log("api call: " + apiCall);
@@ -46,7 +47,7 @@
 
             table.appendRows(dates.map(function(date){
                 return {
-                    name: table.tableInfo.alias,
+                    name: table.tableInfo.id,
                     date: date.day,
                     downloads: date.downloads
                 }
