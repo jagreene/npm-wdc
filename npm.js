@@ -1,4 +1,4 @@
-(function() {
+
     // Create the connector object
     var myConnector = tableau.makeConnector();
 
@@ -29,7 +29,7 @@
             }
         })
 
-        schemaCallback(schemas);
+        schemaCallback(JSON.parse(JSON.stringify(schemas)));
     };
 
     // Download the data
