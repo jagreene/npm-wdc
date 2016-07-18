@@ -18,7 +18,7 @@
         }, {
             id: "date",
             alias: "date",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.string,
             folder: "info"
         }];
 
