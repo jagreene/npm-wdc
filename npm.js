@@ -8,15 +8,18 @@
         var cols = [{
             id: "name",
             alias: "name",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.string,
+            folder: "info"
         }, {
             id: "downloads",
             alias: "downloads",
-            dataType: tableau.dataTypeEnum.int
+            dataType: tableau.dataTypeEnum.int,
+            folder: "info"
         }, {
             id: "date",
             alias: "date",
             dataType: tableau.dataTypeEnum.string
+            folder: "info"
         }];
 
         var packages = tableau.connectionData.split(";")[0].replace(/\s+/g, '').split(',');
