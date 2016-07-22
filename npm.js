@@ -16,7 +16,7 @@
             dataType: tableau.dataTypeEnum.int,
             folder: "info",
             columnType: "continuous",
-            aggType: "avg"
+            aggType: tableau.aggTypeEnum.count
         }, {
             id: "date",
             alias: "date",
