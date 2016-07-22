@@ -15,7 +15,8 @@
             alias: "downloads",
             dataType: tableau.dataTypeEnum.int,
             folder: "info",
-            columnType: "continuous"
+            columnType: "continuous",
+            aggType: "avg"
         }, {
             id: "date",
             alias: "date",
