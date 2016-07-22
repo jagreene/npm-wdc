@@ -16,7 +16,8 @@
             dataType: tableau.dataTypeEnum.int,
             folder: "info",
             columnType: "continuous",
-            aggType: tableau.aggTypeEnum.count
+            aggType: tableau.aggTypeEnum.count,
+            columnRole: tableau.columnRoleEnum.dimension
         }, {
             id: "date",
             alias: "date",
