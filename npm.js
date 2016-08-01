@@ -9,21 +9,19 @@
             id: "name",
             alias: "name",
             dataType: tableau.dataTypeEnum.string,
-            folder: "info"
+            folder: "Names",
+            hidden: true
         }, {
             id: "downloads",
             alias: "downloads",
             dataType: tableau.dataTypeEnum.int,
-            folder: "info",
+            folder: "Stats",
             columnType: "continuous",
-            aggType: tableau.aggTypeEnum.count,
-            columnRole: tableau.columnRoleEnum.dimension
         }, {
             id: "date",
             alias: "date",
             dataType: tableau.dataTypeEnum.string,
-            folder: "info",
-            hidden: true
+            folder: "Stats",
         }];
 
         var packages = tableau.connectionData.split(";")[0].replace(/\s+/g, '').split(',');
